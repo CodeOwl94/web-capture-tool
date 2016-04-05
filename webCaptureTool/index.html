@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <title>Data Entry Portal</title>
+
+    
+
+</head>
+
+
+
+<body>
+
+    <!--Begin navbar--> 
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" alt="Brand" src="assets/logo.jpg">
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Data Capture Tool <span class="sr-only">(current)</span></a></li>
+                    <li><a href="DataTables/Example_2/">Experiment Database</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!--End navbar--> 
+
+    <div class="container">
+
+        <!-- You only need this form and the form-basic.css -->
+
+        <form  method="post" action="submit_form.php" enctype="multipart/form-data">
+
+            <div class="page-header">
+                <h1>Experiment Details <small>Please fill out the form and then hit either submit button</small></h1>
+            </div>
+
+            <div class="row">
+                <!--Begin submit button -->
+                <div class="col-md-3">
+                    <button class="btn btn-primary col-md-12" type="submit" name="submit" value="submit_begin" id="submit_begin">Submit Details</button>
+                </div>
+                <!--End submit button-->
+
+
+            </div>
+
+
+
+            <div class="row">
+                <!--Begin name -->
+                <div class="col-md-3">
+                    <div class="panel panel-primary ">
+                        <div class="panel-heading">
+                            Name
+                        </div>
+                        <div class="panel-body">
+                            <select class="col-md-12" name="first_name" id="first_name"></select>
+                        </div>
+                    </div>
+                </div>
+                <!--End name-->
+
+            </div>        
+
+            <div class="row">
+                <!--Begin start time -->
+                <div class="col-md-6">
+                 <div class="panel panel-primary ">
+                    <div class="panel-heading">
+                        Start time
+                    </div>
+                    <div class="panel-body">
+                        <input type="date" name="start_date" id="start_date">
+                        <input type="time" name="start_time" id="start_time">
+                    </div>
+                </div>
+            </div>
+            <!--End start time -->
+
+            <!--Begin end time -->
+            <div class="col-md-6">
+             <div class="panel panel-primary ">
+                <div class="panel-heading">
+                    End time
+                </div>
+                <div class="panel-body">
+                    <input type="date" name="end_date" id="end_date">
+                    <input type="time" name="end_time" id="end_time">
+                </div>
+            </div>
+        </div>
+        <!--End end time -->
+    </div>
+
+    <div class="row">
+
+        <!--Begin motor number -->
+        <div class="col-md-3">
+         <div class="panel panel-primary ">
+            <div class="panel-heading">
+                Motor Number
+            </div>
+            <div class="panel-body">
+                <input type="number" name="motor" id="motor" min="1">
+            </div>
+        </div>
+    </div>
+    <!--End motor number -->
+
+    <!--Begin tyre ring set number -->
+    <div class="col-md-3">
+     <div class="panel panel-primary ">
+        <div class="panel-heading">
+            Tyre Ring Set Number
+        </div>
+        <div class="panel-body">
+            <input type="number" name="tyre_ring" id="tyre_ring" min="1">
+        </div>
+    </div>
+</div>
+<!--End tyre ring set number -->
+
+<!--Begin drive pulley number -->
+<div class="col-md-3">
+ <div class="panel panel-primary ">
+    <div class="panel-heading">
+        Drive Pulley Number
+    </div>
+    <div class="panel-body">
+        <input type="number" name="drive_pulley" id="drive_pulley" min="1">
+    </div>
+</div>
+</div>
+<!--End drive pulley number -->
+
+<!--Begin drive belt number -->
+<div class="col-md-3">
+ <div class="panel panel-primary ">
+    <div class="panel-heading">
+        Drive Belt Number
+    </div>
+    <div class="panel-body">
+        <input type="number" name="drive_belt" id="drive_belt" min="1">
+    </div>
+</div>
+</div>
+<!--End drive belt number -->
+</div>
+
+<div class="row">
+    <!--Begin comments -->
+    <div class="col-md-12">
+        <div class="panel panel-primary ">
+            <div class="panel-heading">
+                Comments
+            </div>
+            <div class="panel-body">
+                <textarea class ="col-md-12" rows="5" name="comments" id="comments"></textarea>
+            </div>
+        </div>
+    </div>
+    <!--End comments -->
+</div>
+
+<div class="row">
+    <!--Begin comments -->
+    <div class="col-md-3">
+        <div class="panel panel-primary ">
+            <div class="panel-heading">
+                Upload File
+            </div>
+            <div class="panel-body">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+            </div>
+        </div>
+    </div>
+    <!--End comments -->
+
+    
+</div>
+
+<div class="row">
+    <!--Begin submit button -->
+    <div class="col-md-3">
+        <button class="btn btn-primary col-md-12" type="submit" name="submit" value="submit_end" id="submit_end">Submit Details</button>
+    </div>
+    <!--End submit button-->
+</div>
+
+</form>
+
+</div>
+
+<!--js scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="scripts/script.js"></script>
+
+</body>
+
+</html>
