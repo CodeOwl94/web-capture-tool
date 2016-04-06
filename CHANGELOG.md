@@ -1,5 +1,8 @@
-
 #Changelog
+
+####Release 1.1.1
+#####2016-04-06
+The time pickers have now been replaced with ClockPickers by [weareoutman](https://weareoutman.github.io/clockpicker/). It is essentially a clock style time picker based on Bootstrap and jQuery.  
 
 ####Release 1.0.1
 #####2016-04-05

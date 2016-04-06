@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+$(".clockpicker").clockpicker();
 
 	//Populate the first dropdown
 	$.getJSON("first_name.php", success = function(data)
@@ -20,11 +20,18 @@ $(document).ready(function(){
 	});
 
 	$('#navbar_btn').click(function(){
-
 		format_time();
 		$('#submit_end').click();
 
+
 	});
+
+	/*$('#clock_start').change(function(){
+
+		alert("Change");
+		alert($('#clock_start').val())
+
+	});*/
 
 	//Do the time formatting
 	function format_time(){

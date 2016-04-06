@@ -13,6 +13,11 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+    <!--Clockpicker-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/bootstrap-clockpicker.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/github.min.css">
+
     <!-- My custom edits -->
     <link rel="stylesheet" type="text/css" href="assets/custom.css">
 
@@ -103,8 +108,18 @@
                     </div>
                     <div class="panel-body">
                         <input type="date" name="start_date" id="start_date" required>
-                        <input type="time" name="start_time" id="start_time" required>
+                        <!--<input type="time" name="start_time" id="start_time" required>-->
+
+                        <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+                        <input type="text" class="form-control" value="00:00" id="start_time">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </span>
                     </div>
+
+                    </div>
+                    
+
                 </div>
             </div>
             <!--End start time -->
@@ -117,7 +132,13 @@
                 </div>
                 <div class="panel-body">
                     <input type="date" name="end_date" id="end_date" required>
-                    <input type="time" name="end_time" id="end_time" required>
+                    <!--<input type="time" name="end_time" id="end_time" required>-->
+                    <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+                        <input type="text" class="form-control" value="00:00" id="end_time">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -217,6 +238,9 @@
     <!--End submit button-->
 </div>
 
+
+
+
 </form>
 
 </div>
@@ -234,6 +258,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!--Clockpicker-->
+<script type="text/javascript" src="dist/bootstrap-clockpicker.min.js"></script>
+
 <script src="scripts/script.js"></script>
 
 </body>
