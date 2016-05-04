@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$loggedIn = 0;
+
+if(isset($_SESSION['user']))
+{
+    $loggedIn = 1;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -49,15 +61,29 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Data Capture Tool <span class="sr-only">(current)</span></a></li>
-                    <li><a href="DataTables/Example_2/">Experiment Database</a></li>
+                    <!--Add class="active" to make the tab look selected. Removed for now so the left side of the menu has the same code across all our relevant files-->
+                    <!-- sr-only has something to do with screen readers. It's to do with accessibility. I'll remove it for now. Bring it back later if needed. 
+                    It goes in the content of the link. e.g. Data Capture Tool <span class="sr-only">(current)</span>-->
+                    <li><a href="http://localhost:90/Git/web-capture-tool/webcapturetool/">Data Capture Tool</a></li>
+                    <li><a href="http://localhost:90/Git/web-capture-tool/webcapturetool/DataTables/Example_2/">Experiment Database</a></li>
+                    <li><a href="http://localhost:90/Git/web-capture-tool/webcapturetool/users/register.php">Register</a></li>
                     
                 </ul>
                 <!--Now have the submit button on the right-->
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <p class="navbar-btn" >
-                            <a class="btn btn-info" id="navbar_btn">Submit Details</a>
+
+                            <!--Check if the user is logged in. If they are, we show them the submit button. Otherwise, it's the login button. -->
+                            <?php if($loggedIn):?>
+                            <a class="btn btn-danger" id="logout_btn" href="./users/logout.php?logout">Log Out</a>
+                            <a class="btn btn-info" id="submit_nav">Submit Details</a>
+
+                            <?php else: ?>
+                            <a class="btn btn-danger" id="login_btn" href="users/login.php">Log In To Submit</a>                            
+
+                            <?php endif;?>
+
                         </p>
                     </li>
                 </ul>   
@@ -110,7 +136,7 @@
                         <input type="date" name="start_date" id="start_date" required>
                         <!--<input type="time" name="start_time" id="start_time" required>-->
 
-                        <div class="input-group clockpicker col-md-4" data-placement="left" data-align="top" data-autoclose="true">
+                        <div class="input-group clockpicker col-md-4" data-placement="right" data-align="top" data-autoclose="true">
                         <input type="text" class="form-control" value="00:00" id="start_time" required>
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-time"></span>
@@ -231,11 +257,14 @@
 </div>
 
 <div class="row">
+
     <!--Begin submit button -->
     <div class="col-md-3">
         <button class="btn btn-primary col-md-12" type="submit" name="submit" value="submit_end" id="submit_end" style="display: none">Submit Details</button>
     </div>
     <!--End submit button-->
+
+   
 </div>
 
 

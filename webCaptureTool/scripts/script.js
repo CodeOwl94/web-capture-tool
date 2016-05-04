@@ -19,7 +19,7 @@ $(".clockpicker").clockpicker();
 
 	});
 
-	$('#navbar_btn').click(function(){
+	$('#submit_btn').click(function(){
 		format_time();
 		$('#submit_end').click();
 
