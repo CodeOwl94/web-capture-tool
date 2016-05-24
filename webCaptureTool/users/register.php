@@ -84,9 +84,9 @@ if(isset($_POST['signup-btn']))
                     <!--Add class="active" to make the tab look selected. Removed for now so the left side of the menu has the same code across all our relevant files-->
                     <!-- sr-only has something to do with screen readers. It's to do with accessibility. I'll remove it for now. Bring it back later if needed. 
                     It goes in the content of the link. e.g. Data Capture Tool <span class="sr-only">(current)</span>-->
-                    <li><a href="http://localhost:90/Git/web-capture-tool/webcapturetool/">Data Capture Tool</a></li>
-                    <li><a href="http://localhost:90/Git/web-capture-tool/webcapturetool/DataTables/Example_2/">Experiment Database</a></li>
-                    <li><a href="http://localhost:90/Git/web-capture-tool/webcapturetool/users/register.php">Register</a></li>
+                    <li><a href="../">Data Capture Tool</a></li>
+                    <li><a href="../DataTables/Example_2/">Experiment Database</a></li>
+                    <li><a href="#">Register</a></li>
 
                 </ul>
 

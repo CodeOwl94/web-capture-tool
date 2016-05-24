@@ -2,7 +2,7 @@
 
 $debug=0;
 //This code opens a connection to the relevant database
-//You need to move this out of public access as it has login details for root! 
+//You need to move this out of public access as it has login details!
 
 $hostname='systemhealthlab.ddns.net';
 $username='experimenter';
