@@ -4,10 +4,12 @@ $debug=0;
 //This code opens a connection to the relevant database
 //You need to move this out of public access as it has login details!
 
-$hostname='systemhealthlab.ddns.net';
-$username='experimenter';
-$password='exp2016';
-$dbname='systemhealthlab';
+$sqlDetails = file("../../../../login/sql.txt")
+
+$hostname=$sqlDetails[0];
+$username=$sqlDetails[1];
+$password=$sqlDetails[2];
+$dbname=$sqlDetails[3];
 //$usertable='users';
 
 $link = mysqli_connect($hostname,$username, $password, $dbname) OR DIE ('Unable to connect to database! Please try again later.');
